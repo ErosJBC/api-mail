@@ -31,7 +31,7 @@ class EmailController extends Controller {
 
         if ($email) {
             try {
-                Mail::mailer('smtp') -> to('consultas_binareon@outlook.com') -> send(new MailResponse($email));
+                Mail::mailer('smtp') -> to('consultas_binareon@outlook.com', 'binareon.deploy@gmail.com') -> send(new MailResponse($email));
                 return response() -> json([
                     'success' => true,
                     'message' => 'Mail has been sended successfully'

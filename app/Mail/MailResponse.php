@@ -31,6 +31,6 @@ class MailResponse extends Mailable implements ShouldQueue
      */
     public function build()
     {
-        return $this -> from('consultas_binareon@outlook.com', 'Info Binareon') -> view('mail.message') -> subject("Información de Servicios: ".$this->email["name"]);
+        return $this -> from('info@binareon.com', 'Info Binareon') -> view('mail.message') -> subject("Información de Servicios: ".$this->email["name"]);
     }
 }
